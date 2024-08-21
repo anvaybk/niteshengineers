@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d6efd">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Media Gallery - Nitesh Engineers and Consultants</title>
+</head>
+<body>
+    <header>
+        <nav class="hamburger-menu">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="menu">
+                <a href="index.html"><i class="icon-home"></i>Home</a>
+                <a href="about.html"><i class="icon-info"></i>About Us</a>
+                <a href="services.html"><i class="icon-services"></i>Services</a>
+                <a href="contact.html"><i class="icon-contact"></i>Contact Us</a>
+                <a href="media.html"><i class="icon-media"></i>Media Gallery</a>
+            </div>
+        </nav>
+        <h1>Media Gallery</h1>
+    </header>
+
+    <section class="content">
+        <h2>Audio Slideshow</h2>
+        <audio controls>
+            <source src="audio/sample.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h2>Video Slideshow</h2>
+        <video controls>
+            <source src="video/sample.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Nitesh Engineers and Consultants. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
