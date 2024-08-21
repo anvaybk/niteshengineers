@@ -1,21 +1,33 @@
+
 // Toggle Hamburger Menu
 document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.querySelector('.menu');
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
 
-    menuToggle.addEventListener('change', function() {
-        if (this.checked) {
-            menu.classList.add('open');
-        } else {
-            menu.classList.remove('open');
-        }
+    navToggle.addEventListener('change', function() {
+        navMenu.classList.toggle('open');
     });
 });
 
 // Service Worker Registration
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/serviceworker.js')
+        navigator.serviceWorker.register('serviceworker.js')
+            .then(function(registration) {
+                console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch(function(error) {
+                console.log('Service Worker registration failed:', error);
+            });
+    });
+});
+
+
+
+// Service Worker Registration
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('serviceworker.js')
             .then(function(registration) {
                 console.log('Service Worker registered with scope:', registration.scope);
             })
